@@ -344,6 +344,10 @@ article {
   height: 100%;
   margin: 0;
 }
+/* Post_collapsed */
+h1.title-collapse {
+    font-size: 1.3em;
+}
 
 /* Code, Pre [landscape](http://goo.gl/hnwXeD) */
 .article-entry pre,
@@ -537,13 +541,40 @@ pre .javascript .function {
 /*-------------------------------------------------------------------------------------------*/
 /* pagination */
 .bitpager a {
-  display: inline-block;
-  padding: 5px 10px;
   background: #ddd;
   color: #999;
   font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
   text-shadow: 0 0 1px #fff;
-  margin-bottom: 20px;
+}
+
+.bitpager {
+    margin: 120px 0 40px;
+    text-align: center;
+}
+
+.bitpager .prev, .bitpager .next, .bitpager .page-number {
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    margin: 0 10px;
+    padding: 0 10px;
+    line-height: 30px;
+}
+
+.bitpager .space {
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    margin: 0;
+    padding: 0;
+}
+
+.bitpager. prev {
+    margin-left: 0;
+}
+
+.bitpager .next {
+    margin-right: 0;
 }
 
 #footer {

@@ -1,8 +1,7 @@
 /*-------------------------------------------------------------------------------------------*/
 /* 0. setup (overwrite [Pure](http://purecss.io/)) */
 /*-------------------------------------------------------------------------------------------*/
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
-@import url(http://fonts.googleapis.com/css?family=Varela+Round%3Aregular&#038;subset=latin&#038;ver=3.8);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|PT+Sans:400,700);
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);
 
 body {
@@ -11,8 +10,8 @@ body {
   padding: 0px;
   background-color: #eee;
   text-align: center;
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Lantinghei TC', 'Hiragino Kaku Gothic Pro', 'Microsoft Jhenghei', sans-serif;
-  font-size: 16px;
+  font-family: 'Open Sans', 'Source Sans Pro', 'Helvetica Neue', 'Hiragino Kaku Gothic Pro', 'Microsoft Jhenghei', sans-serif;
+  font-size: 18px;
   color: #444;
 }
 
@@ -22,9 +21,9 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   text-rendering: optimizelegibility;
 }
-h1 {font-size: 2.3em; margin: .8em 0 .2em 0; letter-spacing: -1px;}
-h2 {font-size: 2em; margin: 1em 0 .4em 0; letter-spacing: -1px;}
-h3 {font-size: 1.7em; margin: 1.2em 0 .6em 0; letter-spacing: -1px;}
+h1 {font-size: 2.3em; margin: .8em 0 .2em 0}
+h2 {font-size: 2em; margin: 1em 0 .4em 0}
+h3 {font-size: 1.7em; margin: 1.2em 0 .6em 0}
 h4 {font-size: 1.4em; margin: 1.4em 0 .8em 0}
 h5 {font-size: 1.2em; margin: 1.6em 0 1.0em 0}
 h6 {font-size: 1em; margin: 1.8em 0 1.2em 0}
@@ -33,7 +32,7 @@ a {
   transition: 0.3s;
 }
 a, a:visited{
-  color: #08c; /* block-background-text-normal */
+  color: #3979CC; /* block-background-text-normal */
   text-decoration: none;
 }
 
@@ -44,10 +43,17 @@ p + ul {
   margin: -15px 0 15px 0;
 }
 li ul {
-  margin: 5px 0 10px 0;
+  margin: 0 0 10px 0;
+}
+li > p {
+  margin: 0 0 15px 0 !important;
+}
+li > p + ul {
+  margin: -15px 0 15px 0;
 }
 
 img {
+  max-width: 100%;
   border: 1px solid rgba(0,0,0,0.45);
   background: #fff;
   box-shadow: rgba(0,0,0,1.0) 0px 0px 2px,rgba(255,255,255,0.15) 0px 1px 1px inset;
@@ -105,11 +111,12 @@ blockquote footer {
   right: 0;
   width: 100%;
   margin: 0;
-  padding: 3px 0;
+  padding: 0;
   border-bottom: 1px solid #bbb;
   background: #494949;
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 20px;
   color: #eee;
 }
 #header a, #header a:visited {
@@ -122,7 +129,7 @@ blockquote footer {
 .brand {
   display: inline-block;
   padding: 7px 20px 5px 0;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 /* Navbar */
@@ -135,7 +142,7 @@ ul.nav-menu li {
   list-style-type: none;
   display: inline-block;
   margin: 0;
-  padding: 7px 10px;
+  padding: 10px 10px;
 }
 ul.nav-menu li a {
   text-decoration: none;
@@ -172,7 +179,7 @@ ul.nav-menu li {
 ul.nav-menu li ul.sub-menu {
   display: none;
   position: absolute;
-  top: 31px;
+  top: 40px;
   left: 0;
 }
 ul.nav-menu li:hover ul.sub-menu {
@@ -181,7 +188,6 @@ ul.nav-menu li:hover ul.sub-menu {
 
 ul.ext-menu {
   position: relative;
-  top: 3px;
   float: right;
 }
 #menu-toggle {
@@ -244,12 +250,12 @@ ul.ext-menu {
 #main-content a:hover {
   border-radius: 4px;
   box-shadow: #258fb8 0px 0px 2px,rgba(255,255,255,0.15) 0px 1px 1px inset;
-  background: #08c;
+  background: #3979CC;
   color: #eee;
 }
 
 #main-content p {
-  margin: 0 0 20px 0;
+  margin: 0 0 25px 0;
 }
 #main-content p + pre,
 #main-content p + figure,
@@ -285,11 +291,11 @@ article {
 }
 
 .article-meta .article-tags {
-  margin: 0 15px 0;
+  margin: 0 20px 0;
   font-size: .7em;
 }
 .article-meta .article-tags a {
-  color: #08c;
+  color: #3979CC;
   text-shadow: none;
 }
 @media all and (max-width: 700px) {
@@ -348,11 +354,16 @@ article {
   border-style: solid;
   border-color: #ddd;
   border-width: 1px 0;
-  overflow: auto;
-  color: #333;
-  line-height: 22.400000000000002px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  color: #ccc;
+  line-height: 22px;
   font-size: 14px;
   text-shadow: none;
+}
+.article-entry pre .line,
+.article-entry .highlight .line {
+  min-height: 22px;
 }
 .article-entry li pre,
 .article-entry li .highlight {
@@ -369,7 +380,7 @@ article {
 }
 .article-entry pre,
 .article-entry code {
-  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+  font-family: Consolas, Monaco, 'Source Code Pro', monospace;
 }
 .article-entry code {
   background: #ddd;
@@ -538,9 +549,10 @@ pre .javascript .function {
 #footer {
   width: 100%;
   margin: 30px 0 0 0;
-  padding: 15px 0 5px 0;
-  background-color: #ccc;
-  font-size: .75em;
+  padding: 20px 0 15px 0;
+  font-size: .8em;
+  background: #ccc;
+  border-top: 1px solid #aaa;
 }
 
 /*-------------------------------------------------------------------------------------------*/

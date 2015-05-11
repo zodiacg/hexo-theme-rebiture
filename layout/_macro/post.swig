@@ -34,15 +34,24 @@
             </div></header>
             <div class="article-entry">
                 {% if post.excerpt and is_index %}
-                {{ post.excerpt }}
-                <a href="{{ url_for(post.path) }}">{{ theme.excerpt_link }}</a>
+                {{ post.excerpt }}                
                 {% else %}
                 {{ post.content }}
                 {% endif %}
             </div>
-            <footer><div class="article-comment">
-                A sample comment
-            </div></footer>
+            <footer>{% if is_index %}
+            {% if post.excerpt %}
+            <div class="pull-left"><a href="{{ url_for(post.path) }}"><i class="fa fa-chevron-right"></i>{{ theme.excerpt_link }}</a></div>
+            {% endif %}
+            <div class="pull-right">
+                <span>Comment count</span>
+            </div>
+            {% else %}
+            <div class="article-comment">
+                A sample inside comment
+            </div>
+            {% endif %}
+            </footer>
         </div>
     </div>
 </article>

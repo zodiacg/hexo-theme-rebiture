@@ -5,6 +5,6 @@
         {{ current }} &nbsp; {{config.author}} All Rights Reserved
         / <a href="https://github.com/kywk/hexo-theme-biture">rebiture</a> for <a href="http://zespia.tw/hexo/">hexo</a>
         / designed by <a href="http://kywk.github.io/moco/">MooCow (kywk)</a>
-        / coded by <a href="http://zodiacg.net/">Zodiacg</a>
+        / coded by <a href="http://zodiacg.net/">ZodiacG</a>.
     </div>
 </div>

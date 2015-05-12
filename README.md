@@ -2,7 +2,9 @@
 
 ## Introduction
 
-A Swig-rewritten version of [Biture theme](http://github.com/kywk/hexo-theme-biture) with several small modification. The theme is also optimised for usage in mainland China.
+A Swig-rewritten version of [Biture theme](http://github.com/kywk/hexo-theme-biture) with several small modifications. The theme is also optimised for usage in mainland China.
+
+The code of theme is inspired by [Next](http://github.com/iissnan/hexo-theme-next) in many ways. Thanks a lot.
 
 Biture is a single column, widget-less minimalist theme for [Hexo](http://hexo.io), based on [Pure](http://purecss.io/) css framework.
 
@@ -62,12 +64,15 @@ extmenu:
 excerpt_link: Read More
 
 fancybox: true
+
+since: 2008
 ```
 
 - **menu** - Main navigation menu, dropdown menu supported.
 - **extment** - Extend menu at the right hand side, dropdown menu supported too.
 - **excerpt_link** - "Read More" link at the bottom of excerpted articles. `false` to hide the link.
 - **fancybox** - KEEP IT 'true'
+- **since** - Year when the site established.
 
 Please config analytics system or comment system in site config file.
 

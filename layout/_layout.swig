@@ -3,6 +3,7 @@
 <head>
     {% include '_partial/head.swig' %}
     <title>{% block title %}{% endblock %}</title>
+    {% include '_custom/custom_head.swig' %}
 </head>
 <body>
     <header id="header">
@@ -18,5 +19,6 @@
     </footer>
     {% include '_partial/after_all.swig' %}
     {% block comment_script %}{% endblock %}
+    {% include '_custom/custom_footer.swig' %}
 </body>
 </html>

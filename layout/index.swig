@@ -9,3 +9,12 @@
     {% endfor %}
     {% include '_partial/pagination.swig' %}
 {% endblock %}
+
+{% block comment_script %}
+{% if config.duoshuo_shortname %}
+{% include '_script/comments/duoshuo.swig' %}
+{% elseif config.disqus_shortname %}
+{% include '_script/comments/disqus.swig' %}
+{% endif %}
+{% endblock %}
+

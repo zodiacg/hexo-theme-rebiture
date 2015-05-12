@@ -17,5 +17,6 @@
         {% include '_partial/footer.swig' %}
     </footer>
     {% include '_partial/after_all.swig' %}
+    {% block comment_script %}{% endblock %}
 </body>
 </html>

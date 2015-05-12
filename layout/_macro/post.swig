@@ -34,7 +34,7 @@
             </div></header>
             <div class="article-entry">
                 {% if post.excerpt and is_index %}
-                {{ post.excerpt }}                
+                {{ post.excerpt }}
                 {% else %}
                 {{ post.content }}
                 {% endif %}
@@ -44,11 +44,31 @@
             <div class="pull-left"><a href="{{ url_for(post.path) }}"><i class="fa fa-chevron-right"></i>{{ theme.excerpt_link }}</a></div>
             {% endif %}
             <div class="pull-right">
-                <span>Comment count</span>
+                {% if post.comments %}
+                {% if config.duoshuo_shortname %}
+                <span><a href="{{ url_for(post.path) }}#comments" >
+                    <span class="article-comment-count ds-thread-count" data-thread-key="{{ post.path }}"></span>
+                </a></span>
+                {% elseif config.disqus_shortname %}
+                <span><a href="{{ url_for(post.path) }}#comments" >
+                    <span class="article-comment-count disqus-comment-count" data-disqus-identifier="{{ post.path }}"></span>
+                </a></span>
+                {% endif %}
+                {% endif %}
             </div>
             {% else %}
             <div class="article-comment">
-                A sample inside comment
+                {% if post.comments %}
+                <h1 class="title">Comments</h1>
+                {% if config.duoshuo_shortname %}
+                <div class="ds-thread" data-thread-key="{{ post.path }}" data-title="{{ post.title }}" data-url="{{
+                    post.permalink }}"></div>
+                {% elseif config.disqus_shortname %}
+                <div id="disqus_thread">
+                    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                </div>
+                {% endif %}
+                {% endif %}
             </div>
             {% endif %}
             </footer>

@@ -6,10 +6,13 @@ menu:
         yahoo: //yahoo.com/
 
 extmenu:
-    github: //github.com/kywk/
+    github: 
+        kywk: //github.com/kywk/
+        zodiacg: //github.com/zodiacg/
     hexo: //zespia.tw/hexo/
     theme:
         biture: //github.com/kywk/hexo-theme-biture
+        rebiture: //github.com/zodiacg/hexo-theme-rebiture
         landscape: //github.com/tommy351/hexo-theme-landscape
         light: //github.com/tommy351/hexo-theme-light
 

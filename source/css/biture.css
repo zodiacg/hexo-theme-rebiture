@@ -1,8 +1,8 @@
 /*-------------------------------------------------------------------------------------------*/
 /* 0. setup (overwrite [Pure](http://purecss.io/)) */
 /*-------------------------------------------------------------------------------------------*/
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|PT+Sans:400,700);
-@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);
+@import url(http://fonts.useso.com/css?family=Source+Sans+Pro:300,400,600,700|PT+Sans:400,700);
+@import url(http://fonts.useso.com/css?family=Source+Code+Pro);
 
 body {
   width: 100%;
@@ -10,14 +10,14 @@ body {
   padding: 0px;
   background-color: #eee;
   text-align: center;
-  font-family: 'Open Sans', 'Source Sans Pro', 'Helvetica Neue', 'Hiragino Kaku Gothic Pro', 'Microsoft Jhenghei', sans-serif;
+  font-family: 'Open Sans', 'Source Sans Pro', 'Helvetica Neue', 'Hiragino Kaku Gothic Pro', 'Microsoft Yahei', 'Microsoft Jhenghei', sans-serif;
   font-size: 18px;
   color: #444;
 }
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.6em;
-  font-family: 'Myriad Pro', 'PT Sans', 'Lucida Grande', 'Hiragino Sans GB', 'Lantinghei TC', 'Hiragino Kaku Gothic Pro', 'Microsoft Jhenghei', sans-serif;
+  font-family: 'Myriad Pro', 'PT Sans', 'Lucida Grande', 'Hiragino Sans GB', 'Lantinghei TC', 'Hiragino Kaku Gothic Pro', 'Microsoft Yahei', 'Microsoft Jhenghei', sans-serif;
   font-weight: normal;
   text-rendering: optimizelegibility;
 }

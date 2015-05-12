@@ -1,7 +1,7 @@
 {% extends '_layout.swig' %}
 {% import '_macro/post-collapse.swig' as post_template %}
 
-{% block title %} Archives | {{ config.title }} {% endblock %}
+{% block title %} Tag: {{ page.tag }} | {{ config.title }} {% endblock %}
 
 {% block content %}
 <div class="archive">

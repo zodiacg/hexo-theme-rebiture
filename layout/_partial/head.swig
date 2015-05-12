@@ -33,3 +33,11 @@
 <link rel="stylesheet" href="{{ url_for("css") }}/biture.css" type="text/css" />
 <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css" />
 <!--[if lt IE 9]><script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+
+{% if config.google_analytics %}
+{% include '../_script/analytics/google_analytics.swig' %}
+{% endif %}
+
+{% if config.baidu_analytics %}
+{% include '../_script/analytics/baidu_analytics.swig' %}
+{% endif %}
